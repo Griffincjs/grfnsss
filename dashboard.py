@@ -18,7 +18,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://grfnsss.onrender.com"
 
 # --- SIDEBAR & BRANDING ---
 st.sidebar.title("📊 BI Control Center")
