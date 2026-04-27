@@ -38,11 +38,10 @@ try:
 except:
     st.sidebar.error("○ System Offline")
 
-# --- MAIN LOGIC ---
 if menu == "Dashboard":
     st.title("👕 Smart Clothing Executive Overview")
     
-    # --- 1. TOP LEVEL KPI TILES ---
+    # 1. TOP LEVEL KPI TILES 
     try:
         sales_res = requests.get(f"{API_URL}/data/sales")
         if sales_res.status_code == 200 and sales_res.json():
@@ -62,7 +61,7 @@ if menu == "Dashboard":
     except:
         st.info("Waiting for data stream... Run your generator to see metrics.")
 
-    # --- 2. INTELLIGENT RECOMMENDATIONS ---
+    #  2. INTELLIGENT RECOMMENDATIONS 
     st.subheader("🤖 AI Action Plan")
     try:
         rec_res = requests.get(f"{API_URL}/ml/recommendations")
@@ -82,7 +81,7 @@ if menu == "Dashboard":
 
     st.markdown("---")
 
-    # --- 3. VISUAL ANALYTICS ---
+    #  3. VISUAL ANALYTICS 
     if 'df_stats' in locals():
         col_a, col_b = st.columns([2, 1])
         with col_a:
