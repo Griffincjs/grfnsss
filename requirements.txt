@@ -1,0 +1,10 @@
+streamlit
+requests
+pandas
+fastapi
+uvicorn
+pydantic
+prophet
+sqlalchemy
+psycopg2-binary
+python-multipart
